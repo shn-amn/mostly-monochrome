@@ -9,6 +9,7 @@ local diagnostics = require("mostly-monochrome.diagnostics")(palette)
 local statusline = require("mostly-monochrome.statusline")(palette)
 local nvim_tree = require("mostly-monochrome.nvim-tree")(palette, basic)
 local gitsigns = require("mostly-monochrome.gitsigns")(palette, basic)
+local devicons = require("mostly-monochrome.devicons")(palette)
 
 return lush.merge {
   basic,
@@ -19,4 +20,5 @@ return lush.merge {
   statusline,
   nvim_tree,
   gitsigns,
+  devicons
 }
