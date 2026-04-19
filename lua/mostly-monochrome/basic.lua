@@ -31,10 +31,16 @@ return function(p)
       CurSearch { fg = p.black, bg = p.grey7 },
       IncSearch { CurSearch },
 
+      ColorColumn { bg = p.grey1 },
+
       Added { fg = p.green },
       Changed { fg = p.blue },
       Removed { fg = p.red },
-      -- TODO: DiffAdd, DiffChange, DiffDelete, etc.
+      DiffAdd { bg = p.green.darken(50) },
+      DiffChange { bg = p.red.darken(50) },
+      DiffDelete { bg = p.red.darken(50) },
+      DiffText { bg = p.grey3 },
+      DiffTextAdd { bg = p.green.darken(30) },
 
     }
     ---@diagnostic enable: undefined-global
