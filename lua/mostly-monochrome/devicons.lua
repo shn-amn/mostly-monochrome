@@ -79,8 +79,13 @@ return function(p)
       end)
       res = lush.merge { res, cur }
     end
-    local default = lush(function() return { DevIconDefault { fg = p.blue } } end)
-    return lush.merge { res, default }
+    local overrides = lush(function() return {
+      DevIconDefault { fg = p.grey9 },
+      DevIconTxt { fg = p.grey9 },
+      DevIconConf { fg = p.grey7 },
+      DevIconConfiguration { fg = p.grey7 },
+    } end)
+    return lush.merge { res, overrides }
     ---@diagnostic enable: undefined-global
   else
     return lush(function() return {} end)
